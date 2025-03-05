@@ -1,0 +1,19 @@
+<div class="content">
+  <div class="container">
+    <h2>Resumen de los Datos personales</h2>
+
+    <div class="info-container">
+      <p><strong>Nombre:</strong> {{ personalData?.nombre }}</p>
+      <p><strong>Apellido:</strong> {{ personalData?.apellido }}</p>
+      <p><strong>País:</strong> {{ personalData?.pais }}</p>
+      <p><strong>Dirección:</strong> {{ personalData?.direccion }}</p>
+      <p><strong>Tarjeta:</strong> {{ personalData?.creditCard }}</p>
+      <p><strong>CVC:</strong> {{ personalData?.cvc }}</p>
+      <p><strong>Fecha de Vencimiento:</strong> {{ personalData?.fechaDeVencimiento }}</p>
+      <p><strong>Email:</strong> {{ personalData?.email }}</p>
+      <p><strong>Total:</strong> {{ personalData?.total | currency }}</p>
+    </div>
+
+    <ion-button (click)="onClick()" expand="block">Regresar</ion-button>
+  </div>
+</div>

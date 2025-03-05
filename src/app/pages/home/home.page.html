@@ -1,0 +1,53 @@
+<app-header></app-header>
+
+<ion-content class="home-container">
+  <div>
+    <h1 class="title">
+      Bienvenido a MaoMao Store
+    </h1>
+    <p class="subtitle">Tu tienda de confianza para productos exclusivos.</p>
+  </div>
+
+  <div class="select">
+
+    <ion-list>
+      <ion-item>
+        <ion-select
+          aria-label="category"
+          placeholder="Select Category"
+          (ionChange)="getProducts($event.detail.value)"
+          class="custom-select"
+        >
+          <ion-select-option value="">Todo</ion-select-option>
+          <ion-select-option value="men's clothing">Masculino</ion-select-option>
+          <ion-select-option value="women's clothing">Femenino</ion-select-option>
+          <ion-select-option value="jewelery">Joyeria</ion-select-option>
+          <ion-select-option value="electronics">Electronica</ion-select-option>
+
+        </ion-select>
+      </ion-item>
+    </ion-list>
+  </div>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col
+        *ngFor="let p of products"
+        size-lg="3"
+        size-md="4"
+        size-sm="6"
+        size="12"
+
+        (click) = "viewProducts(p.id)" 
+      >
+        <app-card
+          [image]="p.image"
+          [title]="p.title"
+          [category]="p.category"
+          [rating]="p.rating.rate"
+          [price]="p.price"
+        ></app-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

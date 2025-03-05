@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-toolbar class="header-toolbar">
+    <div class="header-content">
+      <img
+        src="assets/img/logo-2.png"
+        alt="MaoMao Store Logo"
+        class="header-logo"
+        (click)="goToHome()"
+      />
+      <ion-title class="header-title"
+        >MaoMao<span class="highlight">Store</span></ion-title
+      >
+
+      <div class="header-icons">
+        <ion-button
+          (click)="goToCart()"
+          expand="block"
+          fill="clear"
+          shape="round"
+        >
+          <ion-icon name="cart-outline"></ion-icon>
+          <ion-badge>{{ num }}</ion-badge>
+        </ion-button>
+      </div>
+    </div>
+  </ion-toolbar>
+</ion-header>

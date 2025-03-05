@@ -1,0 +1,36 @@
+<ion-card>
+  <img alt="Silhouette of mountains" [src]="image" class="image" />
+  <ion-card-header>
+    <ion-card-title>{{ title }}</ion-card-title>
+  </ion-card-header>
+
+  <ion-card-content>
+    <ion-card-subtitle>{{ category }}</ion-card-subtitle>
+
+    <div class="description">{{ description }}</div>
+
+    <div class="stars">
+      {{ rating }}
+      <ng-container *ngFor="let star of getStars(rating)">
+        <i [ngClass]="star"></i>
+      </ng-container>
+    </div>
+
+    <ion-card-subtitle> {{ price | currency }}</ion-card-subtitle>
+
+    <ion-input
+      label="Cantidad"
+      label-placement="floating"
+      fill="outline"
+      placeholder="Enter amount"
+      type="number"
+      [(ngModel)]="cantidad"
+    ></ion-input>
+
+    <ion-button (click)="delateFromCart(id)">
+      <ion-icon slot="start" name="cart-outline"></ion-icon>
+      Eliminar del carrito
+    </ion-button>
+  </ion-card-content>
+  
+</ion-card>

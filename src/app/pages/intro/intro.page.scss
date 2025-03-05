@@ -1,0 +1,69 @@
+ion-content {
+  --background: rgb(199, 231, 208);
+  --background: radial-gradient(
+    circle,
+    rgba(199, 231, 208, 1) 19%,
+    rgba(171, 214, 183, 1) 54%,
+    rgba(126, 201, 148, 1) 89%
+  );
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100%;
+  overflow-y: hidden;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  overflow-y: hidden;
+}
+
+.img {
+  max-width: 80%;
+  max-height: 40vh;
+  object-fit: contain;
+}
+
+.shake-left-right {
+  animation: shake-left-right 0.8s linear both;
+}
+@keyframes shake-left-right {
+  0%,
+  100% {
+    transform: rotate(0deg);
+    transform-origin: 50% 50%;
+  }
+  10% {
+    transform: rotate(8deg);
+  }
+  20%,
+  40%,
+  60% {
+    transform: rotate(-10deg);
+  }
+  30%,
+  50%,
+  70% {
+    transform: rotate(10deg);
+  }
+  80% {
+    transform: rotate(-8deg);
+  }
+  90% {
+    transform: rotate(8deg);
+  }
+}
+
+@media (max-width: 614px) {
+  img {
+    max-width: 800px;
+    max-height: 800px;
+  }
+}

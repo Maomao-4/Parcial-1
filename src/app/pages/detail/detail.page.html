@@ -1,0 +1,24 @@
+<app-header></app-header>
+
+<ion-content class="home-container">
+  <div>
+    <h1 class="title">Detalles del Producto</h1>
+  </div>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col *ngIf="product">
+        <app-card
+          [image]="product.image"
+          [title]="product.title"
+          [category]="product.category"
+          [description]="product.description"
+          [rating]="product.rating.rate"
+          [price]="product.price"
+          [id]="product.id"
+          [param]="1"
+        ></app-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
