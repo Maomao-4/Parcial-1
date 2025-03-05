@@ -6,13 +6,13 @@ Una web interactiva que muestra información sobre productos de una tienda en l�
 ## ✨ Características
 - 🛒 Listado de productos con imágenes, títulos y precios.
 - 🔍 Vista detallada de cada producto con:
--- 📌 Nombre del producto
--- 💰 Precio
--- 🏷️ Categoría
--- 📝 Descripción
--- ⭐ Calificación
--- 📂 Filtrado por categorías para una navegación más eficiente.
--- ➕ Agregar productos al carrito de compras.
+- 📌 Nombre del producto
+- 💰 Precio
+- 🏷️ Categoría
+- 📝 Descripción
+- ⭐ Calificación
+- 📂 Filtrado por categorías para una navegación más eficiente.
+- ➕ Agregar productos al carrito de compras.
 
 ## 📸 Capturas de Pantalla
 🏠 Pantalla de Inicio
